@@ -5,3 +5,5 @@ Modified.
 Modified 2.
 
 Modified 3 in newBranch.
+
+Modified 4 to commit to master.
