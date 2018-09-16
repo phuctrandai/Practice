@@ -18,7 +18,7 @@
             include_once './index.php';
             
             $result = "";
-            $checkNumber = 0;
+            $checkNumber = "";
             if($_SERVER['REQUEST_METHOD'] == "POST") {
                 $checkNumber = (int)$_POST['checkNumber'];
                 $i = 2;
@@ -38,9 +38,9 @@
         <div id="content">
             <h1>Bài toán kiểm tra số nguyên tố</h1>
             <div id="main">
-                <form method="POST" action="soNguyenTo.php">
-                    <input type="number" name="checkNumber" value="<?php echo $checkNumber; ?>">
-                    <input type="submit" name="checkButton" value="Kiểm tra">
+                <form method="POST" action="soNguyenTo.php" class="form-inline">
+                    <input type="text" name="checkNumber" value="<?php echo $checkNumber; ?>" class="form-control mb-2 mr-sm-2" placeholder="Nhập số cần kiểm tra...">
+                    <input type="submit" name="checkButton" value="Kiểm tra" class="btn btn-primary mb-2 mr-sm-2">
                 </form>
                 <br>
                 <label id="result"><?php echo $result; ?></label>

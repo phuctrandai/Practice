@@ -26,3 +26,21 @@
 .activeLink {
     border-color: blue !important;
 }
+
+#content {
+    background-color: #000;
+    color: #fff;
+    height: 100%;
+    margin-left: 230px;
+    padding: 50px 100px;
+    position: fixed;
+    width: 100%;
+}
+#main {
+    background-color: orange;
+    border-radius: 10px;
+    color: #000;
+    height: auto;
+    padding: 30px 60px;
+    width: 80%;
+}
