@@ -1,2 +1,2 @@
-# gitTesting
-This is the git test.
+# Practice
+This is repository for my excercise in school.
