@@ -16,9 +16,35 @@
         <?php
             $_SESSION['page'] = 1;
             include_once './index.php';
-        ?>
-        <div>
             
+            $result = "";
+            $checkNumber = 0;
+            if($_SERVER['REQUEST_METHOD'] == "POST") {
+                $checkNumber = (int)$_POST['checkNumber'];
+                $i = 2;
+                while($i < $checkNumber) {
+                    if(($checkNumber % $i) == 0) {
+                        break;
+                    }
+                    $i++;
+                }
+                if($i == $checkNumber) {
+                    $result = "Là số nguyên tố !";
+                } else {
+                    $result = "Không phải số nguyên tố !";
+                }
+            }
+        ?>
+        <div id="content">
+            <h1>Bài toán kiểm tra số nguyên tố</h1>
+            <div id="main">
+                <form method="POST" action="soNguyenTo.php">
+                    <input type="number" name="checkNumber" value="<?php echo $checkNumber; ?>">
+                    <input type="submit" name="checkButton" value="Kiểm tra">
+                </form>
+                <br>
+                <label id="result"><?php echo $result; ?></label>
+            </div>
         </div>
     </body>
 </html>
