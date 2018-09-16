@@ -1,0 +1,28 @@
+#menu {
+    height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    position: fixed;
+    width: 230px;
+}
+#menu ul {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+#menu ul li {
+    border-width: 16px;
+    border-left: solid;
+    border-color: #343a40;
+}
+#menu ul li a {
+    color: #fff;
+    padding-left: 16px;
+}
+#menu ul li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+.activeLink {
+    border-color: blue !important;
+}
