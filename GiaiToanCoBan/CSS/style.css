@@ -1,8 +1,14 @@
+body {
+    height: auto;
+    overflow-x: hidden;
+    width: 100%;
+}
 #menu {
     height: 100%;
     padding-left: 0px;
     padding-right: 0px;
     position: fixed;
+    top: 50px;
     width: 230px;
 }
 #menu ul {
@@ -30,10 +36,11 @@
 #content {
     background-color: #000;
     color: #fff;
+    left: 230px;
     height: 100%;
-    margin-left: 230px;
     padding: 50px 100px;
-    position: fixed;
+    position: absolute;
+    top: 50px;
     width: 100%;
 }
 #main {
@@ -42,5 +49,5 @@
     color: #000;
     height: auto;
     padding: 30px 60px;
-    width: 80%;
+    width: 70%;
 }

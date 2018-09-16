@@ -1,5 +1,5 @@
 
-    <div class="bg-dark" style="width:100%; height: 50px">
+    <div class="bg-dark" style="width:100%; height: 50px; position: fixed; z-index: 10;">
         <p style="color:#fff; font-weight: bold; padding: 15px 15px;">Toán học cơ bản</p>
     </div>
     <nav class="navbar bg-dark" id="menu">

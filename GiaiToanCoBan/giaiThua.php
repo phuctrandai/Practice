@@ -16,6 +16,29 @@
         <?php
             $_SESSION['page'] = 5;
             include_once './index.php';
+            
+            $valueA = $result = "";
+            if($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $valueA = (int)$_POST['valueA'];
+                $result = 1;
+                for($i = 1 ; $i <= $valueA; $i++) {
+                    $result *= $i;      
+                }
+                $result = "Kết quả: ".$result;
+            }
         ?>
+        
+        <div id="content">
+            <h1 class="mb-2 mr-sm-2">Bài toán tìm giai thừa của một số</h1>
+            <div id="main">
+                <form method="POST" action="giaiThua.php" class="form-inline">
+                    <input type="text" name="valueA" value="<?php echo $valueA; ?>" placeholder="Nhập số cần tìm giai thừa..." class="form-control mb-2 mr-sm-2"/><br/>
+                                        
+                    <input type="submit" name="checkButton" value="Tính" class="btn btn-primary mr-sm-2 mb-2">
+                </form>
+                <br>
+                <label id="result"><?php echo $result; ?></label>
+            </div>
+        </div>
     </body>
 </html>
